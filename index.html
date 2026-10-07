@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Speech to Text CRUD</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🎙️ Speech to Text</h1>
+        <p class="subtitle">Convert your speech into written text</p>
+
+        <!-- Input -->
+        <textarea
+            id="textInput"
+            placeholder="Type something or click the microphone and speak..."
+        ></textarea>
+
+        <!-- Buttons -->
+        <div class="buttons">
+
+            <button onclick="startSpeech()">
+                🎤 Speak
+            </button>
+
+            <button onclick="createText()">
+                ➕ Save
+            </button>
+
+            <button onclick="clearText()">
+                🗑️ Clear
+            </button>
+
+        </div>
+
+        <p id="status">Ready</p>
+
+
+        <!-- Search -->
+        <input
+            type="text"
+            id="search"
+            placeholder="🔍 Search saved text..."
+            onkeyup="readTexts()"
+        >
+
+
+        <h2>Saved Transcriptions</h2>
+
+        <div id="records"></div>
+
+    </div>
+
+
+    <!-- Edit Popup -->
+
+    <div id="editBox" class="popup">
+
+        <div class="popup-content">
+
+            <h2>Edit Text</h2>
+
+            <textarea id="editInput"></textarea>
+
+            <div class="buttons">
+
+                <button onclick="updateText()">
+                    Update
+                </button>
+
+                <button onclick="closeEdit()">
+                    Cancel
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

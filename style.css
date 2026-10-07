@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+
+    padding: 40px 20px;
+
+    background: linear-gradient(
+        135deg,
+        #e0f7fa,
+        #f5f7ff
+    );
+
+    color: #222;
+}
+
+
+/* Main container */
+
+.container {
+    width: 700px;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Heading */
+
+h1 {
+    text-align: center;
+
+    color: #087f8c;
+
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    text-align: center;
+
+    color: #777;
+
+    margin-bottom: 25px;
+}
+
+
+/* Textarea */
+
+textarea {
+    width: 100%;
+
+    height: 160px;
+
+    padding: 15px;
+
+    resize: vertical;
+
+    border: 2px solid #e5e5e5;
+
+    border-radius: 15px;
+
+    outline: none;
+
+    font-size: 16px;
+
+    line-height: 1.5;
+}
+
+textarea:focus {
+    border-color: #12a8a0;
+}
+
+
+/* Buttons */
+
+.buttons {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 15px;
+}
+
+button {
+    flex: 1;
+
+    padding: 13px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #087f8c;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #066b76;
+
+    transform: translateY(-2px);
+}
+
+
+/* Status */
+
+#status {
+    text-align: center;
+
+    margin: 15px;
+
+    color: #087f8c;
+
+    font-weight: bold;
+}
+
+
+/* Search */
+
+#search {
+    width: 100%;
+
+    padding: 14px;
+
+    margin: 10px 0 25px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 12px;
+
+    outline: none;
+
+    font-size: 15px;
+}
+
+
+/* Saved heading */
+
+h2 {
+    margin-bottom: 15px;
+
+    color: #333;
+}
+
+
+/* Record */
+
+.record {
+    padding: 18px;
+
+    margin-bottom: 15px;
+
+    border-radius: 15px;
+
+    background: #f8fafb;
+
+    border-left: 5px solid #087f8c;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.record p {
+    line-height: 1.5;
+
+    margin-bottom: 12px;
+}
+
+
+/* Record buttons */
+
+.record button {
+    flex: initial;
+
+    padding: 8px 14px;
+
+    font-size: 13px;
+}
+
+.edit {
+    background: #f0a500;
+}
+
+.delete {
+    background: #e63946;
+}
+
+
+/* Popup */
+
+.popup {
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.5);
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+}
+
+.popup-content {
+    width: 500px;
+
+    max-width: 100%;
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 20px;
+}
+
+.popup-content h2 {
+    margin-bottom: 15px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .container {
+        padding: 20px;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    body {
+        padding: 15px;
+    }
+
+}
